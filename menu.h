@@ -12,7 +12,7 @@ void renderMenu(char a[4][20],int len,int index){
     system("cls");
     int i;
     for(i=0;i<len;i++){
-        if(i==index%4){
+        if(i==index%len){
             red();
         }
         else{
@@ -43,7 +43,7 @@ c=getch();
     
     }
     else if(c==13){
-        return index;
+        return index%len;
     }
     }
     

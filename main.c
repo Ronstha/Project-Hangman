@@ -3,19 +3,24 @@
 #include "start.h"
 // void Welcome();
 #include "menu.h"
-// #include "game.c"
+#include "game.h"
 
 // #include "highscore.c"
 // #include "instructions.c"
 // void Welc`wome();
 int main(){
-    // Welcome();
+    Welcome();
+    getch();
+
     char a[4][20]={"Start Game","Instructions","High Score","Exit"};
+    char b[3][20]={"Easy","Medium","Hard"};
     int c=menu(a  ,4);
     switch (c){
         case 0:
-        //Start Game
-         break;
+           menu(b  ,3);
+           StartGame();
+            //Start Game
+           break;
         case 1:
         //INstruction
          break;
