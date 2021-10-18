@@ -1,0 +1,14 @@
+Menu()
+
+Start Screen
+
+
+GameOver()
+Instruction
+HighScore
+
+
+Game Screen()
+
+
+
