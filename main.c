@@ -1,21 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
-// #include "menu.c"
+#include "start.h"
+// void Welcome();
+#include "menu.h"
 // #include "game.c"
-// #include "start.c"
+
 // #include "highscore.c"
 // #include "instructions.c"
+// void Welc`wome();
 int main(){
+    // Welcome();
+    char a[4][20]={"Start Game","Instructions","High Score","Exit"};
+    int c=menu(a  ,4);
+    switch (c){
+        case 0:
+        //Start Game
+         break;
+        case 1:
+        //INstruction
+         break;
+        case 2:
+        //HighScore
+         break;
+        case 3:
+        //Exit
+         return 0;
+         break;
+        default:
+         break;
+    }
+    // fseek(stdin,0,SEEK_END);
+   
+    // printf("%d",arr_length(a));
     
-    // printf("hello");
-    int a;
-    printf("hello");
-    scanf("%d",a);
-    system("cls");
-    printf("\n");
     return 0;
-}
 
+}
 // StartScreen()
 // while True:
 //    choice=MEnu()
