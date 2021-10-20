@@ -2,21 +2,15 @@
 #include <stdlib.h>
 #include "start.h"
 
-#include "menu.h"
 #include "game.h"
+#include "menu.h"
+#include "instructions.h"
 #include <windows.h>
 
-void hidecursor()
-{
-   HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
-   CONSOLE_CURSOR_INFO info;
-   info.dwSize = 100;
-   info.bVisible = FALSE;
-   SetConsoleCursorInfo(consoleHandle, &info);
-}
+
 int main()
 {
-    hidecursor();
+    cursorVisiblity(0);
 
     SetConsoleTitle("Project Hangman");
 
@@ -33,17 +27,29 @@ int main()
         {
         case 0:
             diff = menu(b, 3);
+            if(diff==-1){
+                break;
+            }
             StartGame(diff);
             //Start Game
             break;
         case 1:
             //INstruction
+            displayInstructions();
             break;
         case 2:
             //HighScore
+            displayHighScore();
             break;
         case 3:
             //Exit
+    system("cls");
+    printf("Press any Key...");
+    while(!kbhit()){
+
+    }
+   
+
             return 0;
             break;
         default:

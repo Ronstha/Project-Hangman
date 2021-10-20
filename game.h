@@ -203,12 +203,14 @@ void StartGame(int diff)
                 char name[30];
                 printf("!!New High Score!!\n");
                 printf("Your Name:");
+                cursorVisiblity(1);
                 scanf("%s",name);
                 saveHighScore(name,difficulty,score,hs);
                 fseek(stdin,0,SEEK_END);    
-
+                cursorVisiblity(0);
                 
             }
+                printf("\nPress Any Key to Continue...");
         
 
             while (!kbhit())

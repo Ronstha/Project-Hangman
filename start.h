@@ -6,7 +6,10 @@
 void Welcome(){
     char a;
     printf("Welcome");
-    a=getch();
+    while(!kbhit()){
+
+   
+    }
     // return 0;
 
 }

@@ -12,6 +12,7 @@ void renderMenu(char a[4][20],int len,int index){
     system("cls");
     int i;
     for(i=0;i<len;i++){
+        gotoxy(52,12+i);
         if(i==index%len){
             red();
         }
@@ -32,6 +33,7 @@ int menu(char a[4][20],int len){
     while (1){
     if(kbhit()){
 c=getch();
+
     if(c==119){
         index-=1;
         if(index<0) index=len-1;
@@ -45,6 +47,10 @@ c=getch();
     else if(c==13){
         return index%len;
     }
+    else if(c==27){
+        return -1;
+    }
+
     }
     
     

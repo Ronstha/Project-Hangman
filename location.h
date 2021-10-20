@@ -11,3 +11,12 @@ void gotoxy(int x,int y){
     SetConsoleCursorPosition(a,b);
 
 }
+void cursorVisiblity(int bool)
+{
+   HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+   CONSOLE_CURSOR_INFO info;
+   info.dwSize = 100;
+
+   info.bVisible =bool;
+   SetConsoleCursorInfo(consoleHandle, &info);
+}
