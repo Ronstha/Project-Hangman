@@ -41,10 +41,31 @@ int main()
         break;
     }
     }
-    // printf("%s %s\n", words[z].word,words[z].hint);
+    
     z+=1;
     }
+    
+    
+    
+    
     // i=0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
     for(i=0;i<100;i++){
     
