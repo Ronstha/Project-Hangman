@@ -2,10 +2,12 @@
 
 void drawHangman(int *mistakes)
 {
+    setcolor(3);
     *mistakes += 1;
     int j = 0;
     if (*mistakes == 1)
     {
+        setcolor(14);
         gotoxy(100, 4);
         printf("%c%c%c%c%c%c%c%c%c", 201, 20, 20, 20, 20, 20, 20, 20, 187);
         while (j < 16)
@@ -20,8 +22,10 @@ void drawHangman(int *mistakes)
     else if (*mistakes == 2)
     {
         //head
+        setcolor(6);
         gotoxy(99, 5);
         printf(" | ");
+        setcolor(3);
         gotoxy(99, 6);
         printf("0 0");
         gotoxy(99, 7);

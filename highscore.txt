@@ -2,9 +2,9 @@ ronish easy 40
 barbarik easy 40
 rohan medium 30
 Ronish Easy 23
+ga easy 20
+rohan easy 11
+ronish easy 10
+ronish easy 10
 dsdk easy 10
-ronish easy 0
-efd easy 0
-ram easy 0
-dfk medium 0
-0 0 0
+sda medium 0

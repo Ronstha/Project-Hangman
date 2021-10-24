@@ -95,14 +95,18 @@ void StartGame(int diff)
         count -= 1;
         correct = 0;
         system("cls");
+        setcolor(6);// yellow
         printf("Difficulty=%s", difficulty);
         gotoxy(112, 0);
+        setcolor(6);//purple
         printf("Score=%d", score);
         gotoxy(43, 8);
+        setcolor(11);//blue
         printf("Hint:%s", currenthint);
         gotoxy(43, 10);
         for (i = 0; i < strlen(currentword); i++)
         {
+            setcolor(3);//blue;
             if (currentword[i] != ' ')
             {
                 printf("_ ");
@@ -114,6 +118,7 @@ void StartGame(int diff)
             }
         }
         gotoxy(5, 15);
+        setcolor(13);//violet
         printf("Characters:");
         charcount = 0;
         while (1)
@@ -141,11 +146,14 @@ void StartGame(int diff)
                 chars[charcount] = character;
                 charcount += 1;
                 gotoxy(18, 15);
+                setcolor(10);//green
                 for (i = 0; i < charcount; i++)
                 {
+
                     printf("%c, ", chars[i]);
                 }
                 draw = 1;
+                setcolor(3);
                 for (i = 0; i < strlen(currentword); i++)
                 {
                     if (currentword[i] == character)
@@ -169,7 +177,7 @@ void StartGame(int diff)
             }
             if (correct == strlen(currentword))
             {
-                score += 10;
+                score += 15-(mistakes*2);
                 break;
             }
 
@@ -198,7 +206,7 @@ void StartGame(int diff)
             printf("Score=%d\n",score);
             printf("The correct word is %s.\n",currentword);
             int hs=checkhighscore(score);
-            
+
             if(hs>=0){
                 char name[30];
                 printf("!!New High Score!!\n");

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "color.h"
 #include <stdlib.h>
 #include "start.h"
 
@@ -12,7 +13,7 @@ int main()
 {
     cursorVisiblity(0);
 
-    SetConsoleTitle("Project Hangman");
+    SetConsoleTitle("Hangman");
 
     Welcome();
     getch();
@@ -21,17 +22,19 @@ int main()
     char b[3][20] = {"Easy", "Medium", "Hard"};
     while (1)
     {
+        
 
         int c = menu(a, 4), diff;
         switch (c)
         {
         case 0:
+        //Start Game
             diff = menu(b, 3);
             if(diff==-1){
                 break;
             }
             StartGame(diff);
-            //Start Game
+        
             break;
         case 1:
             //INstruction
@@ -44,7 +47,11 @@ int main()
         case 3:
             //Exit
     system("cls");
-    printf("Press any Key...");
+
+    setcolor(11);
+    printf("Thank You For Playing\n");
+    setcolor(14);
+    printf("Press any Key to exit...");
     while(!kbhit()){
 
     }
