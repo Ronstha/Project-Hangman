@@ -1,0 +1,62 @@
+pakistan,country
+algeria,country
+cameroon,country
+yemen,country
+zambia,country
+vietnam,country
+vanuayu,country
+tuvala,country
+swaziland,country
+sierra leone,country
+sengal,country
+seychelles,country
+samoa,country
+panama,country
+nicaragua,country
+mozambique,country
+malawi,country
+madagascar,country
+benediction,vocabulary
+timidity,vocabulary
+aboveboard,vocabulary
+merriment,vocabulary
+assdious,vocabulary
+amolgamate,vocabulary
+beaming,vocabulary
+crafty,vocabulary
+erudite,vocabulary
+profane,vocabulary
+bragging,vocabulary
+prison break,movies & tv shows
+god of egypt,movies & tv shows
+now you see me,movies & tv shows
+perfume,movies & tv shows
+iron fist,movies & tv shows
+the dark knight,movies & tv shows
+wolverine,movies & tv shows
+shameless,movies & tv shows
+house of cards,movies & tv shows
+jack reacher,movies & tv shows
+home alone,movies & tv shows
+beauty and the beast,movies & tv shows
+dunkrik,movies & tv shows
+moonlight,movies & tv shows
+the maze runner,movies & tv shows
+the godfather,movies & tv shows
+pulp fiction,movies & tv shows
+fight club,movies & tv shows
+the matrix,movies & tv shows
+american bison,animal
+shrimp's,animal
+chevrotain,animal
+dragonflies,animal
+prairie dogs,animal
+fleas,animal
+koala,animal
+oysters,animal
+slugs,animal
+antelope,animal
+alligator,animal
+pig,animal
+markhor,animal
+european bison,animal

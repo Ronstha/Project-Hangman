@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include "location.h"
+
 #include <conio.h>
 #include <string.h>
 #include "hangman.h"
-// #include "gameover.h"
+
 #include "highscore.h"
 struct word
 {
@@ -14,11 +14,12 @@ struct word
 };
 struct word words[1000];
 
-int loadWords()
+int loadWords(char diff[20])
 {
     FILE *fptr;
-    char a[20], q[100], c;
-    fptr = fopen("word.txt", "r");
+    char difficulty[20], q[100], c;
+    strcpy(difficulty,diff);
+    fptr = fopen(strcat(difficulty,".txt"), "r");
     int i = 0, ec = 0, z = 0, m[1000], random;
     while (1)
     {
@@ -81,7 +82,7 @@ void StartGame(int diff)
         break;
     }
     srand(time(NULL));
-    int count = loadWords();
+    int count = loadWords(difficulty);
     char currentword[100], currenthint[100], character, chars[30];
     int score = 0, mistakes, i, charcount, draw, correct, gameover = 0;
     while (1)
@@ -97,7 +98,7 @@ void StartGame(int diff)
         system("cls");
         setcolor(6);// yellow
         printf("Difficulty=%s", difficulty);
-        gotoxy(112, 0);
+        gotoxy(110, 0);
         setcolor(6);//purple
         printf("Score=%d", score);
         gotoxy(43, 8);
@@ -188,7 +189,7 @@ void StartGame(int diff)
         if (count == 1)
         {
 
-            break;
+            gameover=2;
         }
 
         if (gameover)
@@ -202,13 +203,24 @@ void StartGame(int diff)
                 drawHangman(&i);
             }
             gotoxy(0,0);
+            setcolor(12);
             printf("!!Game Over!!\n");
-            printf("Score=%d\n",score);
+            setcolor(14);
+            printf("Your score is %d.\n",score);
+            setcolor(13);
+            if(gameover==2){
+
+            printf("You have Completed the game!!");
+            }
+            else{
+
             printf("The correct word is %s.\n",currentword);
+            }
             int hs=checkhighscore(score);
 
             if(hs>=0){
                 char name[30];
+                setcolor(10);
                 printf("!!New High Score!!\n");
                 printf("Your Name:");
                 cursorVisiblity(1);
@@ -218,6 +230,7 @@ void StartGame(int diff)
                 cursorVisiblity(0);
                 
             }
+            setcolor(8);
                 printf("\nPress Any Key to Continue...");
         
 

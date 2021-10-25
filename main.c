@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include "location.h"
 #include "color.h"
 #include <stdlib.h>
 #include "start.h"
 
 #include "game.h"
+#include "exit.h"
 #include "menu.h"
 #include "instructions.h"
 #include <windows.h>
@@ -29,6 +31,7 @@ int main()
         {
         case 0:
         //Start Game
+            
             diff = menu(b, 3);
             if(diff==-1){
                 break;
@@ -46,17 +49,9 @@ int main()
             break;
         case 3:
             //Exit
-    system("cls");
 
-    setcolor(11);
-    printf("Thank You For Playing\n");
-    setcolor(14);
-    printf("Press any Key to exit...");
-    while(!kbhit()){
-
-    }
    
-
+            exitScreen();
             return 0;
             break;
         default:
