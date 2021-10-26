@@ -1,5 +1,4 @@
-#include <stdio.h>
-
+//draw parts of hangman on misatakes
 void drawHangman(int *mistakes)
 {
     setcolor(3);
@@ -7,6 +6,7 @@ void drawHangman(int *mistakes)
     int j = 0;
     if (*mistakes == 1)
     {
+        //hanger
         setcolor(14);
         gotoxy(100, 4);
         printf("%c%c%c%c%c%c%c%c%c", 201, 20, 20, 20, 20, 20, 20, 20, 187);

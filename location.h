@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <windows.h>
 
+//goto position x,y in the console
 void gotoxy(int x,int y){
   HANDLE a;
     COORD b;
@@ -11,6 +10,7 @@ void gotoxy(int x,int y){
     SetConsoleCursorPosition(a,b);
 
 }
+//set cursor visiblity on console
 void cursorVisiblity(int bool)
 {
    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);

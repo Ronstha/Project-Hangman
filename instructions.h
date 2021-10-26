@@ -17,10 +17,10 @@ printf(" - 15 points will be scored if you are able to guess the word and 2 poin
 setcolor(10);
 printf("\n\n\n Esc=Back");
 while(1){
-    while(!kbhit()){
+    while(!kbhit()){//Wait for keyboard input
 
     }
-    if(getch()==27) break;
+    if(getch()==27) break; //Esc Key
 
 }
 }

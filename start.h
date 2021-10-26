@@ -1,12 +1,10 @@
-#include <stdio.h>
-#include <conio.h>
-
+//Welcome Screen
 void Welcome(){
     
     int i=0;
 setcolor(14);
  
- printf("\n\n\t\t\t\t  _    _                                          \n");
+ printf("\n\n\t\t\t\t  _    _               WELCOME TO                 \n");
  printf("\t\t\t\t | |  | |                                         \n");
  printf("\t\t\t\t | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __   \n");
  printf("\t\t\t\t |  __  |/ _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\  \n");

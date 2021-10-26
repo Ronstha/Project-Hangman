@@ -6,11 +6,12 @@ struct HighScores
     char Difficulty[20];
     int score;
 };
-struct HighScores hs[10];
+struct HighScores hs[10];//Structure for HighScore
+//save high score
 void saveHighScore(char name[30], char difficulty[20], int score, int rank)
 {
     FILE *ptr;
-    ptr = fopen("highscore.txt", "w");
+    ptr = fopen("highscore.txt", "w"); //open text file in write mode
     int z = 0;
     while (z != 10)
     {
@@ -26,37 +27,39 @@ void saveHighScore(char name[30], char difficulty[20], int score, int rank)
     fclose(ptr);
 }
 
+//check highscore
 int checkhighscore(int score)
 {
 
     FILE *ptr;
-    ptr = fopen("highscore.txt", "r");
+    ptr = fopen("highscore.txt", "r");//open txt file in read mode
     if (ptr == NULL)
     {
         return 0;
     }
-    int i = 0,rank=-1;
+    int i = 0,rank=-1;//initialize i and rank
     while (i != 10)
     {
 
-        fscanf(ptr, "%s %s %d\n", hs[i].name, hs[i].Difficulty, &hs[i].score);
+        fscanf(ptr, "%s %s %d\n", hs[i].name, hs[i].Difficulty, &hs[i].score); //load data 
    
           
-        if (hs[i].score <= score && rank<0)
+        if (hs[i].score <= score && rank<0)//score is greater than or equal to loaded data
         {
             
             rank=i;
         }
         i += 1;
     }
-    fclose(ptr);
+    fclose(ptr); //close file
 
-    return rank;
+    return rank;//return rank of score,-1 if not highscore
 }
 
+//display Highscores
 void displayHighScore(){
     FILE *ptr;
-    ptr = fopen("highscore.txt", "r");
+    ptr = fopen("highscore.txt", "r"); 
     if (ptr == NULL)
     {
       
@@ -95,10 +98,10 @@ while (i != 10)
     printf("Esc=Back");
     fclose(ptr);
 while(1){
-    while(!kbhit()){
+    while(!kbhit()){//Wait for Keyboard input
 
     }
-    if(getch()==27) break;
+    if(getch()==27) break; //Esc Key
 }
 }
 }
