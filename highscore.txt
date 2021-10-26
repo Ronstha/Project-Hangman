@@ -1,3 +1,4 @@
+El medium 41
 ram easy 41
 prince easy 40
 ole easy 40
@@ -8,4 +9,3 @@ ga easy 20
 manoj easy 11
 rohan easy 11
 sonish easy 10
-kapil easy 10

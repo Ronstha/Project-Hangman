@@ -202,12 +202,12 @@ void StartGame(int diff)
                 for (i = 0; i < strlen(currentword); i++)
                 {
                     //check if current character is in current word
-                    if (currentword[i] == character)
+                    if (currentword[i] == character || currentword[i]+32==character)
                     {
                         gotoxy(43 + (i * 2), 10);
                         correct += 1;
                         draw = 0;//mistake:false
-                        printf("%c", character);//replace _ by character in required position
+                        printf("%c", currentword[i]);//replace _ by character in required position
                     }
                 }
                 if (draw)//mistake

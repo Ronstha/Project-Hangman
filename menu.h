@@ -21,6 +21,7 @@ void renderMenu(char a[4][20], int len, int index)
 }
 int menu(char a[4][20], int len, char title[20])
 {
+    fseek(stdin,0,SEEK_END);
     system("cls");
     setcolor(9);
     gotoxy(50, 11);
